@@ -40,10 +40,10 @@ public class Majority implements Rule {
 			local = grid.getValue(patern.get(i)[0], patern.get(i)[1]);
 			count.put(local, count.get(local)+1);
 		}
-		int occurence = possible.length;
+		int occurence = 0;
 		ArrayList<Integer> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
-			if (count.get(possible[i]) < occurence) {
+			if (count.get(possible[i]) > occurence) {
 				occurence = count.get(possible[i]);
 				sols = new ArrayList<>();
 				sols.add(possible[i]);
@@ -72,10 +72,10 @@ public class Majority implements Rule {
 			local = grid.getColor(patern.get(i)[0], patern.get(i)[1]);
 			count.put(local, count.get(local)+1);
 		}
-		int occurence = possible.length;
+		int occurence = 0;
 		ArrayList<Color> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
-			if (count.get(possible[i]) < occurence) {
+			if (count.get(possible[i]) > occurence) {
 				occurence = count.get(possible[i]);
 				sols = new ArrayList<>();
 				sols.add(possible[i]);
@@ -104,10 +104,10 @@ public class Majority implements Rule {
 			local = grid.getShape(patern.get(i)[0], patern.get(i)[1]);
 			count.put(local, count.get(local)+1);
 		}
-		int occurence = possible.length;
+		int occurence = 0;
 		ArrayList<Shape> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
-			if (count.get(possible[i]) < occurence) {
+			if (count.get(possible[i]) > occurence) {
 				occurence = count.get(possible[i]);
 				sols = new ArrayList<>();
 				sols.add(possible[i]);
@@ -136,10 +136,10 @@ public class Majority implements Rule {
 			local = grid.getPolice(patern.get(i)[0], patern.get(i)[1]);
 			count.put(local, count.get(local)+1);
 		}
-		int occurence = possible.length;
+		int occurence = 0;
 		ArrayList<Police> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
-			if (count.get(possible[i]) < occurence) {
+			if (count.get(possible[i]) > occurence) {
 				occurence = count.get(possible[i]);
 				sols = new ArrayList<>();
 				sols.add(possible[i]);
