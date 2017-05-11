@@ -44,7 +44,7 @@ public class Minority implements Rule {
 		int occurence = possible.length;
 		ArrayList<Integer> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
-			if (count.get(possible[i]) > occurence) {
+			if (count.get(possible[i]) != 0 && count.get(possible[i]) < occurence) {
 				occurence = count.get(possible[i]);
 				sols = new ArrayList<>();
 				sols.add(possible[i]);
@@ -76,7 +76,7 @@ public class Minority implements Rule {
 		int occurence = possible.length;
 		ArrayList<Color> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
-			if (count.get(possible[i]) > occurence) {
+			if (count.get(possible[i]) != 0 && count.get(possible[i]) < occurence) {
 				occurence = count.get(possible[i]);
 				sols = new ArrayList<>();
 				sols.add(possible[i]);
@@ -108,7 +108,7 @@ public class Minority implements Rule {
 		int occurence = possible.length;
 		ArrayList<Shape> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
-			if (count.get(possible[i]) > occurence) {
+			if (count.get(possible[i]) != 0 && count.get(possible[i]) < occurence) {
 				occurence = count.get(possible[i]);
 				sols = new ArrayList<>();
 				sols.add(possible[i]);
@@ -140,7 +140,7 @@ public class Minority implements Rule {
 		int occurence = possible.length;
 		ArrayList<Police> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
-			if (count.get(possible[i]) > occurence) {
+			if (count.get(possible[i]) != 0 && count.get(possible[i]) < occurence) {
 				occurence = count.get(possible[i]);
 				sols = new ArrayList<>();
 				sols.add(possible[i]);
