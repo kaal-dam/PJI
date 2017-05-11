@@ -11,16 +11,16 @@ public class Starter {
 	public static void main(String[] args) {
 		ArrayList<Rule> rules = genRules();
 		int ruleShape,ruleColor,ruleValue,rulePolice;//indice à passé pour chacune des règle voulut
-		int majority,minority,ignore, position;//position d'indice de départ des déifférente règles dans le tableau rules
-		ignore= 0;// à donner sans rien de plus
-		position = 1;// à donner + le numéro de colonne + 3*le numéro de la ligne voulut
+		int majority,minority/*,ignore*/, position;//position d'indice de départ des déifférente règles dans le tableau rules
+		//ignore= 0;// à donner sans rien de plus
+		position = 1-1;// à donner + le numéro de colonne + 3*le numéro de la ligne voulut
 		majority = position+9;// à donner + l'indice du patern souhaité (voir dans la fonction genRules)
 		minority = majority+15;// à donner + l'indice du patern souhaité
 		
 		ruleShape = minority+1;
 		ruleColor = position+2+(2*3);
 		ruleValue = majority+10;
-		rulePolice = ignore;
+		rulePolice = position+4;
 		
 		Grid testGrid = new Grid(rules.get(ruleShape), rules.get(ruleColor), rules.get(ruleValue), rules.get(rulePolice));
 		testGrid.displayRules();
@@ -41,7 +41,7 @@ public class Starter {
 	
 	public static ArrayList<Rule> genRules(){
 		ArrayList<Rule> rules = new ArrayList<Rule>();
-		rules.add(new Ignore());//------------------------add Ignore Rule x1---------------------------
+		//rules.add(new Ignore());//------------------------add Ignore Rule x1---------------------------
 		ArrayList<Integer[]> paternGlobal = new ArrayList<Integer[]>();//0 // indice du patern pour sélection
 		ArrayList<Integer[]> paternCorner = new ArrayList<Integer[]>();//1
 		ArrayList<Integer[]> paternCardinal = new ArrayList<Integer[]>();//2
