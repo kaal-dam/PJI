@@ -35,7 +35,7 @@ public class Grid {
 	}
 	
 	public void displayRules(){
-		System.out.println("rules = " + shapeRule.getLabel() + "," + colorRule.getLabel() + "," + valueRule.getLabel() + "," + policeRule.getLabel());
+		System.out.println("rules = shape : " + shapeRule.getLabel() + ", color : " + colorRule.getLabel() + ", value : " + valueRule.getLabel() + ", police : " + policeRule.getLabel());
 	}
 	
 	public void displaySolution(){
@@ -98,15 +98,20 @@ public class Grid {
 			}
 		}
 		//set de la solution
+		//displayRules();
+		//set de la valeur
 		legitValues = valueRule.legitValue(this);
 		random = (int)(legitValues.length-1);
 		this.solution.value = legitValues[random];
+		//set de la forme
 		legitShapes = shapeRule.legitShape(this);
 		random = (int)(legitShapes.length-1);
 		this.solution.shape = legitShapes[random];
+		//set de la police
 		legitPolices = policeRule.legitPolice(this);
 		random = (int)(legitPolices.length-1);
 		this.solution.police = legitPolices[random];
+		//set de la couleur
 		legitColors = colorRule.legitColor(this);
 		random = (int)(legitColors.length-1);
 		this.solution.color = legitColors[random];
