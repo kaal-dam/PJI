@@ -41,7 +41,7 @@ public class Minority implements Rule {
 			local = grid.getValue(patern.get(i)[0], patern.get(i)[1]);
 			count.put(local, count.get(local)+1);
 		}
-		int occurence = possible.length;
+		int occurence = possible.length*100;
 		ArrayList<Integer> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
 			if (count.get(possible[i]) != 0 && count.get(possible[i]) < occurence) {
@@ -55,7 +55,19 @@ public class Minority implements Rule {
 		ret = new int[sols.size()];
 		for (i = 0; i < sols.size(); ++i) {
 			ret[i] = sols.get(i);
-		}
+		}/*/
+		System.out.println("--------------------------");
+		System.out.println("occurence = " + occurence);
+		System.out.print("count = [");
+		for (int j = 0; j < count.size(); j++) {
+			System.out.print(possible[j]+":"+count.get(possible[j])+", ");	
+		}System.out.println("]");
+		System.out.println("retSize = " + ret.length);
+		System.out.print("retVal = [");
+		for (int j = 0; j < sols.size(); j++) {
+			System.out.print(sols.get(j)+", ");	
+		}System.out.println("]");
+		System.out.println("--------------------------");//*/
 		return ret;
 	}
 
@@ -73,7 +85,7 @@ public class Minority implements Rule {
 			local = grid.getColor(patern.get(i)[0], patern.get(i)[1]);
 			count.put(local, count.get(local)+1);
 		}
-		int occurence = possible.length;
+		int occurence = possible.length*100;
 		ArrayList<Color> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
 			if (count.get(possible[i]) != 0 && count.get(possible[i]) < occurence) {
@@ -87,7 +99,19 @@ public class Minority implements Rule {
 		ret = new Color[sols.size()];
 		for (i = 0; i < sols.size(); ++i) {
 			ret[i] = sols.get(i);
-		}
+		}/*/
+		System.out.println("--------------------------");
+		System.out.println("occurence = " + occurence);
+		System.out.print("count = [");
+		for (int j = 0; j < count.size(); j++) {
+			System.out.print(possible[j]+":"+count.get(possible[j])+", ");	
+		}System.out.println("]");
+		System.out.println("retSize = " + ret.length);
+		System.out.print("retVal = [");
+		for (int j = 0; j < sols.size(); j++) {
+			System.out.print(sols.get(j)+", ");	
+		}System.out.println("]");
+		System.out.println("--------------------------");//*/
 		return ret;
 	}
 
@@ -105,7 +129,7 @@ public class Minority implements Rule {
 			local = grid.getShape(patern.get(i)[0], patern.get(i)[1]);
 			count.put(local, count.get(local)+1);
 		}
-		int occurence = possible.length;
+		int occurence = possible.length*100;
 		ArrayList<Shape> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
 			if (count.get(possible[i]) != 0 && count.get(possible[i]) < occurence) {
@@ -119,7 +143,19 @@ public class Minority implements Rule {
 		ret = new Shape[sols.size()];
 		for (i = 0; i < sols.size(); ++i) {
 			ret[i] = sols.get(i);
-		}
+		}/*
+		System.out.println("--------------------------");
+		System.out.println("occurence = " + occurence);
+		System.out.print("count = [");
+		for (int j = 0; j < count.size(); j++) {
+			System.out.print(possible[j]+":"+count.get(possible[j])+", ");	
+		}System.out.println("]");
+		System.out.println("retSize = " + ret.length);
+		System.out.print("retVal = [");
+		for (int j = 0; j < sols.size(); j++) {
+			System.out.print(sols.get(j)+", ");	
+		}System.out.println("]");
+		System.out.println("--------------------------");//*/
 		return ret;
 	}
 
@@ -137,7 +173,7 @@ public class Minority implements Rule {
 			local = grid.getPolice(patern.get(i)[0], patern.get(i)[1]);
 			count.put(local, count.get(local)+1);
 		}
-		int occurence = possible.length;
+		int occurence = possible.length*100;
 		ArrayList<Police> sols = new ArrayList<>();
 		for (i = 0; i < possible.length; ++i) {
 			if (count.get(possible[i]) != 0 && count.get(possible[i]) < occurence) {
@@ -151,7 +187,19 @@ public class Minority implements Rule {
 		ret = new Police[sols.size()];
 		for (i = 0; i < sols.size(); ++i) {
 			ret[i] = sols.get(i);
-		}
+		}/*/
+		System.out.println("--------------------------");
+		System.out.println("occurence = " + occurence);
+		System.out.print("count = [");
+		for (int j = 0; j < count.size(); j++) {
+			System.out.print(possible[j]+":"+count.get(possible[j])+", ");	
+		}System.out.println("]");
+		System.out.println("retSize = " + ret.length);
+		System.out.print("retVal = [");
+		for (int j = 0; j < sols.size(); j++) {
+			System.out.print(sols.get(j)+", ");	
+		}System.out.println("]");
+		System.out.println("--------------------------");//*/
 		return ret;
 	}
 
