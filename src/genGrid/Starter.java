@@ -1,7 +1,6 @@
 package genGrid;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 import grid.Grid;
 import rules.*;
