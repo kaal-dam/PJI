@@ -136,4 +136,21 @@ public class Grid {
 	public Cell[][] getGrid() {
 		return grid;
 	}
+
+	public Rule getColorRule() {
+		return colorRule;
+	}
+
+	public Rule getShapeRule() {
+		return shapeRule;
+	}
+
+	public Rule getPoliceRule() {
+		return policeRule;
+	}
+
+	public Rule getValueRule() {
+		return valueRule;
+	}
+	
 }

@@ -40,7 +40,6 @@ public class Hacker {
 			valueRules.add(p);
 			policeRules.add(p);
 		}
-		System.out.println(policeRules.size()+""+shapeRules.size()+""+valueRules.size()+""+colorRules.size());
 	}
 	
 	public void initialize(Grid grille){
@@ -126,11 +125,20 @@ public class Hacker {
 		return instance;
 	}
 	
-	public void getSolution(){
+	public void printSolution(){
 		System.out.println("shape : "+ shapeRules);
 		System.out.println("color : "+ colorRules);
 		System.out.println("value : "+ valueRules);
 		System.out.println("police : "+ policeRules);
+	}
+	
+	public List<String> getSolution(){
+		List<String> l = new ArrayList<>(); 
+		l.add(shapeRules.toString());
+		l.add(colorRules.toString());
+		l.add(valueRules.toString());
+		l.add(policeRules.toString());
+		return l;
 	}
 	
 	public int countRules(){
